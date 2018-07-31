@@ -1,0 +1,35 @@
+{
+  "name": "lmm",
+  "version": "1.0.0",
+  "description": "this is flex",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^7.0.1",
+    "postcss-alias": "^2.0.0",
+    "postcss-all-link-colors": "^2.0.0",
+    "postcss-aspect-ratio-mini": "^0.0.2",
+    "postcss-bem": "^0.4.1",
+    "postcss-center": "^1.1.0",
+    "postcss-circle": "^1.1.0",
+    "postcss-clearfix": "^2.0.1",
+    "postcss-color-short": "^0.2.4",
+    "postcss-crip": "^2.0.1",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-font-magician": "^2.1.1",
+    "postcss-nested": "^3.0.0",
+    "postcss-position": "^1.0.0",
+    "postcss-px-to-viewport": "^0.0.3",
+    "postcss-px2rem": "^0.3.0",
+    "postcss-size": "^2.0.0",
+    "postcss-triangle": "^2.0.0",
+    "postcss-viewport-units": "^0.1.4",
+    "postcss-write-svg": "^3.0.1",
+    "precss": "^3.1.2"
+  }
+}

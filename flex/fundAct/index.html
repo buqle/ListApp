@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="baidu-site-verification" content="13Rly5kIwF" />
+    <meta property="qc:admins" content="7705207377641175633" />
+    <meta property="wb:webmaster" content="a5dad0e8c9851f3b" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <title>盛夏激情送礼 赢取旅游基金</title>
+    <link rel="stylesheet" href="dest/css.css">
+</head>
+<body>
+
+<div class="fund-act ww1"></div>
+
+<div class="fund-act2 black">
+    <p class="ww3">7月骄阳，热情似火！转眼间一年已经过半，下半年的帷幕又将拉开，在这个充满夏日激情的时光里，货融贷为大家准备了一份大礼，即日起参与投资即可赢取夏日旅游基金一份！</p>
+</div>
+
+<div class="fund-act3 ww1">
+    <div class="fund-act3-con1 clearg ww3 text-center">
+        <dl style="margin-right: 114px;">
+            <dt class="text-center">
+                <h4>208<i>元</i></h4>
+                <p>30天标</p>
+            </dt>
+            <dd class="black">
+                <p>用户单笔投资<i>30天</i>标满<i>10W</i>元;</p>
+                赢取<i>208元</i>夏日旅游基金一份；
+            </dd>
+        </dl>
+        <dl>
+            <dt class="text-center">
+                <h4>1088<i>元</i></h4>
+                <p>45天标</p>
+            </dt>
+            <dd class="black">
+                <p>用户单笔投资<i>45天</i>标满<i>10W</i>元;</p>
+                赢取<i>1088元</i>夏日旅游基金一份；
+            </dd>
+        </dl>
+        <dl style="margin-right: 114px;">
+            <dt class="text-center">
+                <h4>2088<i>元</i></h4>
+                <p>90天标</p>
+            </dt>
+            <dd class="black">
+                <p>用户单笔投资<i>90天</i>标满<i>10W</i>元;</p>
+                赢取<i>2088元</i>夏日旅游基金一份；
+            </dd>
+        </dl>
+        <dl>
+            <dt class="text-center">
+                <h4>4588<i>元</i></h4>
+                <p>180天标</p>
+            </dt>
+            <dd class="black">
+                <p>用户单笔投资<i>180天</i>标满<i>10W</i>元;</p>
+                赢取<i>4588元</i>夏日旅游基金一份；
+            </dd>
+        </dl>
+    </div>
+    <p class="ww3">（注：不满10W则按比例瓜分，如投<i>1W 30天标</i>，可获得<i style="font-size: 32px;">20.8</i>元旅游基金奖励；</p>
+    <p class="ww3">投资<i>1W 45天标</i>，可获得<i style="font-size: 32px;">108.8</i>元旅游基金奖励，以此类推）</p>
+</div>
+
+<div class="fund-act4 ww1">
+    <p class="ww3">1、活动期间，每个标的的首投用户奖励<i>16元</i>；(起投1万不限标的)</p>
+    <p class="ww3">2、每个标的的尾投用户奖励<i>16元</i>；(不限标的和金额)</p>
+    <img src="images/img7.jpg" alt="" class="block ww3" width="849" style="margin-top: 36px;">
+</div>
+
+<div class="fund-act5 ww1">
+    <div class="fund-act5-con1 ww3 black">
+        <p>1、活动时间：2018年7月19日起；</p>
+        <p>2、单笔投资≥1万元即可参与活动；</p>
+        <p>3、夏日旅游基金为现金红包奖励；</p>
+        <p>4、如有任何建议或疑问，请联系货融贷客服400-0703-188； </p>
+        <p>5、本活动最终解释权归安徽恩泽资产管理有限公司所有。</p>
+    </div>
+    <a href="http://www.huorongdai.com/trade/loan/toLoanList?ivstCategory=5" class="block color-ff text-center" target="_blank">立即投资</a>
+    <img src="images/img8.png" alt="" class="block ww3">
+</div>
+
+<script>
+    //原型链继承
+    function Aniamil() {
+        this.type='cat'
+    };
+    Aniamil.prototype.say=function () {
+        console.log(this.type)
+    };
+    new Aniamil().say();
+
+    //构造函数继承
+    function Animal(type,name) {
+        this.type=type;
+        this.name=name;
+        this.arr=['eat','play'];
+        console.log(this.arr)
+    };
+    function cat(type,name) {
+        Animal.call(this,type,name);
+        console.log(this)
+        this.age='22';
+        this.say=function () {
+            console.log('this.type ' +this.type+ ' this.name '+this.name)
+        }
+    };
+    var smallCat=new cat('dog','TUTU');
+    smallCat.arr.push('sleep');
+    console.log(smallCat.arr);
+    smallCat.say();
+
+    var cats=new cat('cat','BB')
+    console.log(cats.arr);
+    cats.say();
+
+    //组合继承
+    function Animals(type,name) {
+        this.type=type
+        this.name=name
+        this.arr=['poor','more poor']
+    };
+    Animals.prototype.says=function () {
+        console.log('this name '+this.name+' this.type '+this.type)
+    }
+
+    function Cats(type,name) {
+        Animals.call(this,type,name);
+        this.age=22
+    }
+    Cats.prototype=new Animals();//原型链继承
+   Cats.prototype.constructor=Cats
+
+    var smallCats=new Cats('smallcats','nini');
+        smallCats.arr.push('poor');
+        console.log(smallCats.arr);
+        smallCats.says();
+
+     //寄生式继承
+    function An(type,name) {
+        this.type=type;
+        this.name=name;
+        this.arr=['eat','play']
+    }
+   An.prototype.sfun=function () {
+       console.log('寄生式 type is '+this.type+' name is '+this.name)
+   };
+    function somes(type,name) {
+        An.call(this,type,name);
+        this.age=222
+    };
+
+    function createObj(child,parent) {
+        var  pro=Object.create(parent.prototype);
+        pro.constructor=child;
+        child.prototype=pro
+    };
+    createObj(somes,An)
+    var cat1=new somes('small','nini');
+    cat1.arr.push('sleep');
+    console.log(cat1.arr);
+    cat1.sfun();
+
+    var cat2=new somes('big','tutu');
+    console.log(cat2.arr);
+    cat2.sfun()
+</script>
+</body>

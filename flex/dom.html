@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="baidu-site-verification" content="13Rly5kIwF" />
+    <meta property="qc:admins" content="7705207377641175633" />
+    <meta property="wb:webmaster" content="a5dad0e8c9851f3b" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <title>盛夏激情送礼 赢取旅游基金</title>
+    <link rel="stylesheet" href="dest/css.css">
+</head>
+<body>
+<!--DOM增加-->
+<!--创建节点-->
+<div style="margin-bottom: 40px;">
+    <h4>document.createElement 创建元素</h4>
+    <h4>document.createTextNode 创建文本节点</h4>
+    <h4>document.createDocumentFrame 创建文档片段</h4>
+    <h4>document.createAttribute 创建节点属性</h4>
+    <h4>document.adoptNode 从外部文档中获取一个节点</h4>
+    <h4>documen.adoptNode 从外部文档中获取一个节点</h4>
+    <h4>documen.importNode 拷贝外部文档的一个节点</h4>
+    <h4>Node.cloneNode 克隆节点</h4>
+    <p id="pip">添加属性</p>
+</div>
+
+
+
+
+<!--节点修改-->
+<div>
+    <h4>node.appendChild 插入一个新节点</h4>
+    <h4>node.insertBefore(child,referenceNode) 插入一个新节点,位置在参考节点referenceNode之前。若参考节点为null则在父节点结尾</h4>
+    <h4>node.removeChild 删除一个节点</h4>
+    <h4>node.replaceChild(newChild,oldChild) 替换一个节点.用指定的newChild替换当前parentNode的一个子节点oldChild</h4>
+    <h4>parentNode.appendChild(child)方法将一个节点child添加到指定的父节点parentNode子节点末尾</h4>
+</div>
+
+<div id="old" style="margin: 20px 0;">
+    <p id="move">1段落</p>
+</div>
+<div id="new"></div>
+<button id="btn">创建元素</button>
+
+
+<div id="parent">
+    <p id="child">旧节点</p>
+</div>
+<button id="btn2">插入节点</button>
+
+<div id="replace">
+    <p id="pip1">旧的子节点</p>
+</div>
+<button id="btn3">替换节点</button>
+
+<!--查找dom-->
+<div style="margin: 40px 0;">
+    <h4>document.getElementById(id) 匹配特定id元素</h4>
+    <h4>document.getElementsByTagName(name) 根据特定的name参数返回一个在document中的nodelist合集</h4>
+    <h4>document.getElementsBytagName(tagName) 返回一个包括所有指定标签 名称元素的HTML集合 HTML collection</h4>
+    <h4>document.getElementsByClassName(className)返回包含所有指定类名的类数组对象</h4>
+    <h4>document.querySelector(selector) 返回指定选择器或选择器组匹配的第一个element</h4>
+    <h4></h4>
+</div>
+
+
+<div id="box">
+    <h3>tit</h3>
+    <ul class="list">
+        <li>1</li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <p id="intro">intro....</p>
+</div>
+
+<!--节点查找-->
+<div>
+    <h4>Node.chilidNodes访问一个元素下所有子节点</h4>
+    <h4>Node.firstChild 访问元素下的第一个子节点</h4>
+    <h4>Node.lastChild 访问元素下的最后一个子节点</h4>
+    <h4>Node.parentNode 访问当前元素的父节点</h4>
+    <h4>Node.nextSibling 访问当前元素同级的一下一个节点</h4>
+    <h4>Node.previousSibling 访问当前元的前一个节点</h4>
+    <h4>Node.previousElementSibling 访问当前元素的前一个元素节点 必须是element</h4>
+    <h4>Node.nextElementSibling 访问当前元素的后一个元素节点，必须是element</h4>
+</div>
+
+
+<script type="text/javascript">
+    /*document.createElement*/
+    var newEle=document.createElement('div');
+    var newEleCont=document.createTextNode('新创建的一个元素');
+    newEle.appendChild(newEleCont);
+    document.body.appendChild(newEle);
+
+    /*document.createTextNode()*/
+    var newContent=document.createTextNode('创建文本节点');
+    newEle.appendChild(newContent)
+
+    /*document.createDocumentFragment() 创建文档片段*/
+
+
+    /*document.createAttribute() 创建新的属性节点*/
+    var node=document.getElementById('pip');
+    var attr=document.createAttribute('name');
+    attr.nodeValue='这是个属性节点';
+    node.setAttributeNode(attr);
+    var cloneNode=node.cloneNode(true);//克隆节点
+    cloneNode.id='pip2';
+    document.body.appendChild(cloneNode);
+
+</script>
+<script type="text/javascript">
+    var pEle=document.getElementById('move');
+    var newELE=document.getElementById('new');
+    var btnEle=document.getElementById('btn');
+    pEle.addEventListener('click',function () {
+        console.log('click me')
+    });
+    btnEle.addEventListener('click',function () {
+        pEle.textContent='新添加的元素';
+        newELE.appendChild(pEle)
+    });//如果插入的节点已存在文档树，则节点会从原先位置一出，在插入新的位置。绑定时间也会被同步过去
+
+    var parentEle=document.getElementById('parent');
+    var childEle=document.getElementById('child');
+    var btnEle2=document.getElementById('btn2');
+    btnEle2.addEventListener('click',function () {
+        var newSpan=document.createElement('span');
+            newSpan.textContent='新添加的节点';
+            parentEle.insertBefore(newSpan,childEle)
+    });
+
+    //改 替换节点
+    var replaceEle=document.getElementById('replace');
+    var pip1=document.getElementById('pip1');
+    var btn3=document.getElementById('btn3');
+        btn3.addEventListener('click',function () {
+            var newChild=document.createElement('p');
+                newChild.textContent='新添加的节点将替换旧节点';
+                replaceEle.replaceChild(newChild,pip1)
+        });
+
+
+
+</script>
+<script type="text/javascript">
+    //DOM查找
+    var idEle=document.getElementById('box');
+    var liEle=idEle.getElementsByTagName('li');
+    console.log(liEle)
+    var queryEle=document.querySelector('li');//返回选择器选中匹配的第一个元素
+    Object.keys(liEle).forEach(function (value) {
+        console.log(value,liEle[value])
+    });
+    var queryId=document.querySelector('#intro');
+    console.log(idEle.childNodes)//返回nodeList是静态的
+    console.log(idEle.children)//返回HTMLCollection是动态的
+</script>
+</body>
